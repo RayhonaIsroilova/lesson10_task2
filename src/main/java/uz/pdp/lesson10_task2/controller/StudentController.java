@@ -83,7 +83,6 @@ public class StudentController {
             return "such group not found";
         }
         student.setGroup(byId1.get());
-        student.setSubjects(studentDTO.getSubjectsId());
         studentRepository.save(student);
         return "Student added";
     }
@@ -106,7 +105,6 @@ public class StudentController {
                 return "Group not found";
             }
             student.setGroup(byId2.get());
-            student.setSubjects(studentDTO.getSubjectsId());
             studentRepository.save(student);
             return "Student edited";
         }
